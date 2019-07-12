@@ -2,10 +2,11 @@ package org.esgi;
 
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
-public class MyBeanApp {
+public class Scene {
 
     public static void main(String[] args) {
         ClassPathXmlApplicationContext ctx = new ClassPathXmlApplicationContext("beans.xml");
+
 
         Guitarist guitarist = ctx.getBean(Guitarist.class);
 

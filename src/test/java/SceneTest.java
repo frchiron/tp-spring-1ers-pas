@@ -7,7 +7,7 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-public class MyBeanAppTest {
+public class SceneTest {
 
     private ClassPathXmlApplicationContext context;
 
