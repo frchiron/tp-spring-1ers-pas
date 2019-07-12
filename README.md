@@ -19,7 +19,7 @@
  - Créer des beans
  - Injecter des dépendances 
 
-##Etapes :
+## Etapes :
 
 1- Créer une interface Instrument avec une méthode play() qui retourne une chaîne de caractères
 
