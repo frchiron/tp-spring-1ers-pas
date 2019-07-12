@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!-- Création d'un bean Spring (singleton par défaut) -->
+    <bean id="firstGuitar" class="org.esgi.Guitar" >
+        <constructor-arg name="brand" value="Caster"/>
+        <constructor-arg name="year" value="2015"/>
+    </bean>
+
+
+    <!-- Création d'un bean Spring (singleton par défaut) -->
+    <bean id="secondGuitar" class="org.esgi.Guitar" >
+        <constructor-arg name="brand" value="Foster"/>
+        <constructor-arg name="year" value="1999"/>
+    </bean>
+
+
+    <bean id="guitarist" class="org.esgi.Guitarist">
+        <constructor-arg>
+        <list>
+            <ref bean="firstGuitar" />
+            <ref bean="secondGuitar" />
+        </list>
+        </constructor-arg>
+    </bean>
+</beans>
