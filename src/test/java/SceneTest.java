@@ -1,10 +1,9 @@
-import org.esgi.Artist;
-import org.esgi.Guitar;
-import org.esgi.Guitarist;
-import org.esgi.Pianist;
+import org.esgi.*;
 import org.junit.*;
+import org.junit.runner.RunWith;
 import org.springframework.beans.factory.NoSuchBeanDefinitionException;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
+import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
@@ -27,7 +26,11 @@ public class SceneTest {
     @Test
     public void should_test_my_bean_john(){
         Artist john = context.getBean(Pianist.class);
+        System.out.println("ceci est un test");
         assertThat(john.perform()).contains("PLINK");
+
+        MySimplePrintln bean = context.getBean(MySimplePrintln.class);
+        bean.println("dqdsq");
     }
 
 
