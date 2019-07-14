@@ -1,4 +1,7 @@
 import org.esgi.Artist;
+import org.esgi.Guitar;
+import org.esgi.Guitarist;
+import org.esgi.Pianist;
 import org.junit.*;
 import org.springframework.beans.factory.NoSuchBeanDefinitionException;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
@@ -16,14 +19,14 @@ public class SceneTest {
 
     @Test
     public void should_test_my_bean_paul(){
-        Artist paul = context.getBean("paul", Artist.class);
+        Artist paul = context.getBean(Guitarist.class);
         assertThat(paul.perform()).contains("PLOP");
     }
 
 
     @Test
     public void should_test_my_bean_john(){
-        Artist john = context.getBean("john", Artist.class);
+        Artist john = context.getBean(Pianist.class);
         assertThat(john.perform()).contains("PLINK");
     }
 

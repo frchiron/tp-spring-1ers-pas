@@ -1,14 +1,9 @@
 package org.esgi;
 
-public class Artist {
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
 
-    private Instrument instrument;
+public interface Artist {
 
-    public Artist(Instrument instrument) {
-        this.instrument = instrument;
-    }
-
-    public String perform(){
-        return instrument.play();
-    }
+    public String perform();
 }
