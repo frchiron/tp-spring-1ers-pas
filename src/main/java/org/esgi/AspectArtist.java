@@ -12,21 +12,19 @@ public class AspectArtist {
 
 // defining pointcut
 
-//    @Pointcut("execution(* *.*(..))")
-    @Pointcut("execution(* org.esgi.*.*(..))")
+//    @Pointcut("execution(* org.esgi.*.*(..))")
+@Pointcut("execution(* org.esgi.*.play(..))")
     public void k() {
-    }//pointcut name
+    }
 
-    //    @Before("execution(public * *(..))")
-//    @Before("execution(public String play())")
     @Before("k()")
     public void logBefore() {
-        System.out.println("on passe par l'aspect");
+        System.out.println("on passe par l'aspect créé par Freddy");
     }
 
     @After("execution(* *.*(..))")
     public void logAfter() {
-        System.out.println("apres 'aspect");
+        System.out.println("apres 'aspect créé par Freddy");
     }
 
 
