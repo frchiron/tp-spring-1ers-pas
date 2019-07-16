@@ -1,4 +1,4 @@
-# TP Spring - Injection de dépendances via configuration xml
+# TP Spring - Injection de dépendances via annotations
 
 
 ## Prequis
