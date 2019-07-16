@@ -13,6 +13,10 @@
   ```
 - Intellij
 
+## Support
+
+
+voir https://www.dev-institut.fr/formation-spring-07-2018/01-context/
 
 ## Objectifs :
 
@@ -31,7 +35,14 @@
 - un Artist john avec un piano
 - un Artist paul avec une guitar
 
-4- Tester le bon chargement des beans via les tests 
+4- Ajouter des tests pour vérifier le bon chargement des beans john et paul
+
+```
+    Artist john = context.getBean("john", Artist.class);
+     assertThat(john.perform()).contains("PLINK");
+```        
+
+5- Tester le bon chargement des beans via les tests 
 ```
 mvn test
 ```

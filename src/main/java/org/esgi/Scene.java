@@ -8,9 +8,6 @@ public class Scene {
         ClassPathXmlApplicationContext ctx = new ClassPathXmlApplicationContext("beans.xml");
 
 
-        Guitarist guitarist = ctx.getBean(Guitarist.class);
-
-        guitarist.play();
 
         ctx.close();
     }
